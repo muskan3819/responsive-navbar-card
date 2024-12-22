@@ -6,13 +6,24 @@
     <title>index</title>
     <style>
                 .navbar{
-            background-color: black;
+            background-color: rgb(250, 173, 173);
             height: 70px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 100%;
+            color: rgb(14, 15, 15);
+            display: flex;
+            align-items: center;
+            border-style: double;
+            border-color: #f9703e;
 
         }
 
         body{
             background-color: #febff5;
+            margin: 0;
+            padding: 0%;
 
             
         }
@@ -24,6 +35,7 @@
             
             display: flex;
         flex-wrap: wrap;
+        justify-content: space-evenly;
         
          
         }
@@ -45,16 +57,75 @@
         border-style: double;
         padding: 5px;
         flex-direction: column;
+        margin: 10px 20px;
         }
-       
-        
+       .s1{
+        border-style: double;
+        width: 150px;
+        height: 20px;
+       }
+       .menu{
+        margin-left: 40%;
+       }
+       .service{
+        margin-left: 10%;
+       }
+       .about{
+        margin-left: 10%;
+       }
+       .search{
+        margin-left: 60%;
+        padding: 3px;
+        border-radius: 10px;
+        border-style: double;
+       }
+         /* for tablet */
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+    
+        .navbar{
+            background-color: #a7fd37;
+            color: #0c0c0c;
+            .menu{
+                margin-left: 20%;
+            }
+
+        }
+
+      }
+ /* for moblie */
+      @media screen and (min-width: 100px) and (max-width: 768px){
+        .navbar{
+            background-color: ~rgb(193, 251, 212);
+            color: #0c0c0c;
+            .search{
+                display: none;
+            }
+            .menu{
+                margin-left: 20%;
+            }
+        }
+
+      }
+       /*for laptop */
+       @media screen and (min-width: 992px) and (max-width: 1200px){
+         .navbar{
+            background-color: rgb(16, 220, 247);
+            color: #0c0c0c;
+         }
+         .menu{
+                margin-left: 20%;
+            }
+       }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <img src="https://cdn-icons-png.flaticon.com/128/7301/7301194.png" height="65px">
-        <h1 style="color: rgb(242, 245, 247);"></h1>
-    </nav>
+   <div class="navbar">
+    <div><img src="https://cdn-icons-png.flaticon.com/128/4336/4336744.png" height="60px"></div>
+    <div class="menu"><a href="#">Menu</a></div>
+    <div class="service"><a href="#">Service</a></div>
+    <div class="about"><a href="#">About us</a></div>
+    <div ><input type="search" placeholder="search" class="search"></div>
+    </div>
     <br>
     <br>
     <div class="card">
